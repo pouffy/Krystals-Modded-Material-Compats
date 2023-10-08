@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:aluminum_rod",
+    "krystalsmaterialcompats:amethyst_bronze_rod",
+    "krystalsmaterialcompats:arcane_gold_rod",
+    "krystalsmaterialcompats:cobalt_rod",
+    "krystalsmaterialcompats:constantan_rod",
+    "krystalsmaterialcompats:electrum_rod",
+    "krystalsmaterialcompats:enderium_rod",
+    "krystalsmaterialcompats:hepatizon_rod",
+    "krystalsmaterialcompats:invar_rod",
+    "krystalsmaterialcompats:lead_rod",
+    "krystalsmaterialcompats:lumium_rod",
+    "krystalsmaterialcompats:manyullyn_rod",
+    "krystalsmaterialcompats:nickel_rod",
+    "krystalsmaterialcompats:pendorite_rod",
+    "krystalsmaterialcompats:queens_slime_rod",
+    "krystalsmaterialcompats:rose_gold_rod",
+    "krystalsmaterialcompats:signalum_rod",
+    "krystalsmaterialcompats:silver_rod",
+    "krystalsmaterialcompats:slimesteel_rod"
+  ]
+}

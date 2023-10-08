@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:aluminum_sheet",
+    "krystalsmaterialcompats:amethyst_bronze_sheet",
+    "krystalsmaterialcompats:arcane_gold_sheet",
+    "krystalsmaterialcompats:cobalt_sheet",
+    "krystalsmaterialcompats:constantan_sheet",
+    "krystalsmaterialcompats:electrum_sheet",
+    "krystalsmaterialcompats:enderium_sheet",
+    "krystalsmaterialcompats:hepatizon_sheet",
+    "krystalsmaterialcompats:invar_sheet",
+    "krystalsmaterialcompats:lead_sheet",
+    "krystalsmaterialcompats:lumium_sheet",
+    "krystalsmaterialcompats:manyullyn_sheet",
+    "krystalsmaterialcompats:nickel_sheet",
+    "krystalsmaterialcompats:pendorite_sheet",
+    "krystalsmaterialcompats:queens_slime_sheet",
+    "krystalsmaterialcompats:rose_gold_sheet",
+    "krystalsmaterialcompats:signalum_sheet",
+    "krystalsmaterialcompats:silver_sheet",
+    "krystalsmaterialcompats:slimesteel_sheet"
+  ]
+}
