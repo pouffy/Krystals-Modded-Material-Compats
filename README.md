@@ -9,17 +9,24 @@ The style of this mod will stay shifted towards mods with a cleaner, more modern
 
 Builtin resourcepacks will be included with the mod to retexture some items like the Create style sheets or Thermal styled dusts to match the textures from mods like Immersive Engineering.
 
-## Currently Supported Mods
-### As of: 8/8/2023
+# Currently Supported Mods
+## Items
 - Create
   >Sheets
 - Thermal Foundation
 - Milkyway Core
   >Unprocessed Sheets
+  
   >Sturdy Sheets
+  
   >Reprocessed Sheets
+  
   >Reinforced Sheets
 - Create: Dreams & Desires
 - Create: Crafts & Additions
   >Rods
-
+## Materials
+- Tinker's Construct
+- Thermal
+- Oh, The Biomes You'll Go
+- Milkyway Core 
