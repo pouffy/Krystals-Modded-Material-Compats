@@ -2,14 +2,13 @@ package com.pouffydev.krystalsmaterialcompats.foundation;
 
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import com.pouffydev.krystalsmaterialcompats.content.item.TagDependentIngredientItem;
-import com.pouffydev.krystalsmaterialcompats.foundation.CompatMetals;
-import com.pouffydev.krystalsmaterialcompats.foundation.KrystalsCompatRegistrate;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AllTags;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AssetLookup;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 
+@SuppressWarnings("unused")
 public class KrystalsRegistryHelpers {
     
     private static final KrystalsCompatRegistrate itemRegistrate = MaterialCompats.registrate().creativeModeTab(() -> MaterialCompats.itemGroup);
@@ -31,7 +30,7 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item(metalName + "_sheet",
-                        props -> new TagDependentIngredientItem(props, ingots(metalName), CompatModItems.sheet.getMods()))
+                        props -> new TagDependentIngredientItem(props, ingots(metalName)))
                 .tag(plates(metalName))
                 .tag(plates())
                 .model(AssetLookup.compatItem("sheet", metalName))
@@ -41,7 +40,7 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item(metalName + "_rod",
-                        props -> new TagDependentIngredientItem(props, ingots(metalName), CompatModItems.rod.getMods()))
+                        props -> new TagDependentIngredientItem(props, ingots(metalName)))
                 .tag(rods(metalName))
                 .tag(rods())
                 .model(AssetLookup.compatItem("rod", metalName))
@@ -51,7 +50,7 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item("unprocessed_" + metalName + "_sheet",
-                        props -> new TagDependentIngredientItem(props, plates(metalName), CompatModItems.sturdySheet.getMods()))
+                        props -> new TagDependentIngredientItem(props, plates(metalName)))
                 .tag(sturdyPlates(metalName))
                 .tag(sturdyPlates())
                 .model(AssetLookup.compatItem("unprocessed_sheet", metalName))
@@ -61,7 +60,7 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item("sturdy_" + metalName + "_sheet",
-                        props -> new TagDependentIngredientItem(props, plates(metalName), CompatModItems.sturdySheet.getMods()))
+                        props -> new TagDependentIngredientItem(props, plates(metalName)))
                 .tag(sturdyPlates(metalName))
                 .tag(sturdyPlates())
                 .model(AssetLookup.compatItem("sturdy_sheet", metalName))
@@ -71,7 +70,7 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item("reprocessed_" + metalName + "_sheet",
-                        props -> new TagDependentIngredientItem(props, sturdyPlates(metalName), CompatModItems.sturdySheet.getMods()))
+                        props -> new TagDependentIngredientItem(props, sturdyPlates(metalName)))
                 .tag(sturdyPlates(metalName))
                 .tag(sturdyPlates())
                 .model(AssetLookup.compatItem("reprocessed_sheet", metalName))
@@ -81,10 +80,20 @@ public class KrystalsRegistryHelpers {
         String metalName = metal.getName();
         return itemRegistrate
                 .item("reinforced_" + metalName + "_sheet",
-                        props -> new TagDependentIngredientItem(props, sturdyPlates(metalName), CompatModItems.sturdySheet.getMods()))
+                        props -> new TagDependentIngredientItem(props, sturdyPlates(metalName)))
                 .tag(reinforcedPlates(metalName))
                 .tag(reinforcedPlates())
                 .model(AssetLookup.compatItem("reinforced_sheet", metalName))
+                .register();
+    }
+    public static ItemEntry<TagDependentIngredientItem> compatDust(CompatMetals metal) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_dust",
+                        props -> new TagDependentIngredientItem(props, rawMaterials(metalName)))
+                .tag(dusts(metalName))
+                .tag(dusts())
+                .model(AssetLookup.compatItem("dust", metalName))
                 .register();
     }
     
@@ -110,6 +119,9 @@ public class KrystalsRegistryHelpers {
     }
     public static TagKey<Item> ingots(String material) {
         return AllTags.forgeItemTag("ingots/" + material);
+    }
+    public static TagKey<Item> dusts(String material) {
+        return AllTags.forgeItemTag("dusts/" + material);
     }
     public static TagKey<Item> nuggets(String material) {
         return AllTags.forgeItemTag("nuggets/" + material);
@@ -138,6 +150,10 @@ public class KrystalsRegistryHelpers {
     public static TagKey<Item> ingots() {
         return AllTags.forgeItemTag("ingots");
     }
+    public static TagKey<Item> dusts() {
+        return AllTags.forgeItemTag("dusts");
+    }
+    
     public static TagKey<Item> randomiumBlacklist() {
         return AllTags.modItemTag("randomium", "blacklist");
     }

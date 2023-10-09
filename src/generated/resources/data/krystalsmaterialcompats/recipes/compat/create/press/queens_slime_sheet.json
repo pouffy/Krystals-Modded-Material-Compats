@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/queens_slime"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/queens_slime"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:queens_slime_sheet"
+    }
+  ]
+}

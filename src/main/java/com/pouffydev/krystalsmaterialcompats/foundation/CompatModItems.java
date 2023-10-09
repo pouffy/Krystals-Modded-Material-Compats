@@ -1,14 +1,13 @@
 package com.pouffydev.krystalsmaterialcompats.foundation;
 
 import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
-import static com.pouffydev.krystalsmaterialcompats.foundation.Mods.*;
 public enum CompatModItems {
-    sheet(create, thermal, immersiveengineering),
-    rod(crafts_and_additions),
-    sturdySheet(milkyway),
-    gear(thermal),
-    dust(thermal, immersiveengineering),
-    coin(thermal),
+    sheet(),
+    rod(),
+    sturdySheet(),
+    gear(),
+    dust(),
+    coin(),
     
     
     

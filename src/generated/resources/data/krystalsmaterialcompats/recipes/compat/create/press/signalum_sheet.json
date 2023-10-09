@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/signalum"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/signalum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:signalum_sheet"
+    }
+  ]
+}

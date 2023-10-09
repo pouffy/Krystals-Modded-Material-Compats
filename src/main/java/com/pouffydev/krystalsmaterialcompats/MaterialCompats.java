@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.pouffydev.krystalsmaterialcompats.foundation.KrystalsCompatRegistrate;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AllLangPartials;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.LangMerger;
+import com.pouffydev.krystalsmaterialcompats.foundation.data.recipe.Recipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -98,6 +99,7 @@ public class MaterialCompats
         }
         if (event.includeServer()) {
             //gen.addProvider(new MWAdvancements(gen));
+            gen.addProvider(new Recipes(gen));
         }
     }
     @Contract("_ -> new")

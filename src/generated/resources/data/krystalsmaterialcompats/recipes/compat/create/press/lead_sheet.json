@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/lead"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/lead"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:lead_sheet"
+    }
+  ]
+}

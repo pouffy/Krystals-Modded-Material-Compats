@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/cobalt"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/cobalt"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:cobalt_sheet"
+    }
+  ]
+}

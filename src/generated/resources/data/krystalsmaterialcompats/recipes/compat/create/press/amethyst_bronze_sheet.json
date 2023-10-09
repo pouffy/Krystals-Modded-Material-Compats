@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/amethyst_bronze"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/amethyst_bronze"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:amethyst_bronze_sheet"
+    }
+  ]
+}

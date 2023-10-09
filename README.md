@@ -11,22 +11,32 @@ Builtin resourcepacks will be included with the mod to retexture some items like
 
 # Currently Supported Mods
 ## Items
-- Create
-  >Sheets
-- Thermal Foundation
-- Milkyway Core
-  >Unprocessed Sheets
-  
-  >Sturdy Sheets
-  
-  >Reprocessed Sheets
-  
-  >Reinforced Sheets
-- Create: Dreams & Desires
-- Create: Crafts & Additions
-  >Rods
+- Sheets
+- Unprocessed Sheets
+- Sturdy Sheets
+- Reprocessed Sheets
+- Reinforced Sheets 
+- Rods
 ## Materials
 - Tinker's Construct
+  - Amethyst Bronze
+  - Cobalt
+  - Hepatizon
+  - Manyullyn
+  - Queen's Slime
+  - Rose Gold
+  - Slimesteel
 - Thermal
+  - Constantan
+  - Electrum
+  - Enderium
+  - Invar
+  - Lead
+  - Lumium
+  - Nickel
+  - Signalum
+  - Silver
 - Oh, The Biomes You'll Go
-- Milkyway Core 
+  - Pendorite
+- Milkyway Core
+  - Aluminium

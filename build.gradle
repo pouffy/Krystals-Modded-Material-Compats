@@ -135,6 +135,9 @@ dependencies {
 
     annotationProcessor "org.spongepowered:mixin:0.8.3:processor"
     testAnnotationProcessor "org.spongepowered:mixin:0.8.3:processor"
+
+    implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
 }
 
 jar {

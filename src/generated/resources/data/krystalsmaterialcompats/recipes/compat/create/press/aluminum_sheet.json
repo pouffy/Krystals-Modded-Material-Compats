@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/aluminum"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/aluminum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:aluminum_sheet"
+    }
+  ]
+}

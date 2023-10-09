@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "values": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/lumium"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/lumium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:lumium_sheet"
+    }
+  ]
+}
