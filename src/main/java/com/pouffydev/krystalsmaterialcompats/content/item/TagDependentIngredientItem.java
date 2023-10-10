@@ -3,8 +3,10 @@ package com.pouffydev.krystalsmaterialcompats.content.item;
 import com.pouffydev.krystalsmaterialcompats.foundation.Mods;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -28,11 +30,11 @@ public class TagDependentIngredientItem extends Item {
         this.tag = tag;
     }
     
-    //@Override
-    //public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-    //    if (!shouldHide())
-    //        super.fillItemCategory(tab, list);
-    //}
+    @Override
+    public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
+        if (!shouldHide())
+            super.fillItemCategory(tab, list);
+    }
     
     public boolean shouldHide() {
         ITagManager<Item> tagManager = ForgeRegistries.ITEMS.tags();

@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/lumium"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/lumium"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:lumium_rod",
+    "count": 2
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/silver"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/silver"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:silver_sheet"
+    }
+  ]
+}

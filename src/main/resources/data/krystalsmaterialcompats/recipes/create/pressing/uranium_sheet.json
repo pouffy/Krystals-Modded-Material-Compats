@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/uranium"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/uranium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:uranium_sheet"
+    }
+  ]
+}

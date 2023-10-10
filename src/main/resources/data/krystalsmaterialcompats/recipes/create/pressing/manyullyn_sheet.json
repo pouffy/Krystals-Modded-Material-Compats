@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/manyullyn"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/manyullyn"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:manyullyn_sheet"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/queens_slime"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/queens_slime"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:queens_slime_rod",
+    "count": 2
+  }
+}

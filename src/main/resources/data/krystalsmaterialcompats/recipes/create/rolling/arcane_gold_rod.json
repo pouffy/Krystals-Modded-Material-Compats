@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/arcane_gold"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/arcane_gold"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:arcane_gold_rod",
+    "count": 2
+  }
+}

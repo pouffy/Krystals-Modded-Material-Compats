@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/osmium"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/osmium"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:osmium_rod",
+    "count": 2
+  }
+}

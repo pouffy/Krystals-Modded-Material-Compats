@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/pendorite"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/pendorite"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:pendorite_rod",
+    "count": 2
+  }
+}

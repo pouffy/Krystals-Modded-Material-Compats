@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/pendorite"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/pendorite"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:pendorite_sheet"
+    }
+  ]
+}

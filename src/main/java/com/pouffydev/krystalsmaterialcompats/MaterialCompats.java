@@ -42,7 +42,7 @@ public class MaterialCompats
     public static final CreativeModeTab itemGroup = new CreativeModeTab(ID) {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(Items.NETHERITE_INGOT);
+            return new ItemStack(KMCItems.enderium_sheet.get());
         }
     };
     public MaterialCompats()

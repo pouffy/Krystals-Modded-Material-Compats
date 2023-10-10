@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/platinum"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/platinum"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:platinum_rod",
+    "count": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/rose_gold"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/rose_gold"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:rose_gold_rod",
+    "count": 2
+  }
+}

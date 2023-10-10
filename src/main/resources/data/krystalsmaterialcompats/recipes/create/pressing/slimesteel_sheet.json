@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/slimesteel"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/slimesteel"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:slimesteel_sheet"
+    }
+  ]
+}

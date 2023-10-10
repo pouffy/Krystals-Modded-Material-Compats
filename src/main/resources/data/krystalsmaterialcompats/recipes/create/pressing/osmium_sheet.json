@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/osmium"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/osmium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:osmium_sheet"
+    }
+  ]
+}

@@ -2,6 +2,9 @@ package com.pouffydev.krystalsmaterialcompats.foundation;
 
 import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static com.pouffydev.krystalsmaterialcompats.foundation.Mods.*;
 
 public enum CompatMetals {
@@ -39,9 +42,15 @@ public enum CompatMetals {
         this.name = Lang.asId(name());
         this.mods = mods;
     }
-    
+    public static List<CompatMetals> getAllMaterials() {
+        return Arrays.asList(CompatMetals.values());
+    }
     public String getName() {
         return name;
+    }
+    public String getCapitalizedName() {
+        //Capitalize the first letter of each word and replace "_" with " "
+        return name().substring(0, 1).toUpperCase() + name().substring(1).toLowerCase().replace("_", " ");
     }
     
     /**

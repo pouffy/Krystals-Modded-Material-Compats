@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/nickel"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/nickel"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:nickel_sheet"
+    }
+  ]
+}

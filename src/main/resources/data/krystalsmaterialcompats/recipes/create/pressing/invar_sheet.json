@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/invar"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/invar"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:invar_sheet"
+    }
+  ]
+}

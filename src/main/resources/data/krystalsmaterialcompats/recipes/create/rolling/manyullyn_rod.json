@@ -1,0 +1,21 @@
+{
+  "type": "createaddition:rolling",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/manyullyn"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/manyullyn"
+  },
+  "result": {
+    "item": "krystalsmaterialcompats:manyullyn_rod",
+    "count": 2
+  }
+}

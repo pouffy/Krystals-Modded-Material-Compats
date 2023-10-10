@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/electrum"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/electrum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:electrum_sheet"
+    }
+  ]
+}

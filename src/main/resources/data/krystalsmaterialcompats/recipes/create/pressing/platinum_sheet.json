@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/platinum"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/platinum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:platinum_sheet"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": [
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:ingots/enderium"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:enderium_sheet"
+    }
+  ]
+}
