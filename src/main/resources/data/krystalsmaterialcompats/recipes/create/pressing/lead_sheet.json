@@ -3,12 +3,10 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/lead"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/lead"
+      }
     }
   ],
   "ingredients": [

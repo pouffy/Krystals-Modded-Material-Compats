@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/hepatizon"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/hepatizon"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/hepatizon"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:hepatizon_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/hepatizon"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:hepatizon_rod",
+      "count": 2
+    }
+  ]
 }

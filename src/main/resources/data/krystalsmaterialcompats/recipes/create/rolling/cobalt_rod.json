@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/cobalt"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/cobalt"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/cobalt"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:cobalt_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/cobalt"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:cobalt_rod",
+      "count": 2
+    }
+  ]
 }

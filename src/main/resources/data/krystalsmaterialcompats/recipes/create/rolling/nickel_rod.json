@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/nickel"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/nickel"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/nickel"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:nickel_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/nickel"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:nickel_rod",
+      "count": 2
+    }
+  ]
 }

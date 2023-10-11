@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/enderium"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/enderium"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/enderium"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:enderium_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:enderium_rod",
+      "count": 2
+    }
+  ]
 }

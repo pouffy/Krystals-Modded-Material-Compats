@@ -10,10 +10,12 @@ buildscript {
         classpath "org.spongepowered:mixingradle:${mixingradle_version}"
     }
 }
+
 plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'com.matthewprenger.cursegradle' version '1.4.0'
+    id "me.modmuss50.mod-publish-plugin" version "0.3.5"
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
@@ -144,7 +146,6 @@ dependencies {
     runtimeOnly fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}")
     runtimeOnly fg.deobf("maven.modrinth:create-dreams-and-desires:ocohqnVU") //1.18
 }
-
 jar {
     manifest {
         attributes([
@@ -159,9 +160,21 @@ jar {
         ])
     }
 }
-
 jar.finalizedBy('reobfJar')
+publishMods {
+    file = jar.archiveJar.archiveFile
+    version = "$mod_version-forge-mc$minecraft_version"
+    changelog = getChangelogText()
+    type = STABLE
+    displayName = "Krystal's Material Compats $mod_version Forge $minecraft_version"
+    modLoaders.add("forge")
 
+    curseforge {
+        projectId = curseforge_id
+        accessToken = System.getenv("CURSEFORGE_TOKEN")
+        minecraftVersions.add(minecraft_version)
+    }
+}
 publishing {
     publications {
         mavenJava(MavenPublication) {

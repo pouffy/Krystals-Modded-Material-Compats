@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/signalum"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/signalum"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/signalum"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:signalum_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/signalum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:signalum_rod",
+      "count": 2
+    }
+  ]
 }

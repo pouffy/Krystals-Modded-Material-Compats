@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/arcane_gold"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/arcane_gold"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/arcane_gold"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:arcane_gold_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/arcane_gold"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:arcane_gold_rod",
+      "count": 2
+    }
+  ]
 }

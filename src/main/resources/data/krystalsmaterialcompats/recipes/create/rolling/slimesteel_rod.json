@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/slimesteel"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/slimesteel"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/slimesteel"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:slimesteel_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/slimesteel"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:slimesteel_rod",
+      "count": 2
+    }
+  ]
 }

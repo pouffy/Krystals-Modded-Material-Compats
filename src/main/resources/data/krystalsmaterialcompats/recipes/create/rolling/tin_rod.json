@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/tin"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/tin"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/tin"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:tin_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/tin"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:tin_rod",
+      "count": 2
+    }
+  ]
 }

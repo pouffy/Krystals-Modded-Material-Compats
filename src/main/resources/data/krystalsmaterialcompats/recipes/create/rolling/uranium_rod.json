@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/uranium"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/uranium"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/uranium"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:uranium_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/uranium"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:uranium_rod",
+      "count": 2
+    }
+  ]
 }

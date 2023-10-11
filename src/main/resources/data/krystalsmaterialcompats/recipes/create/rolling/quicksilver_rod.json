@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/quicksilver"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/quicksilver"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/quicksilver"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:quicksilver_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/quicksilver"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:quicksilver_rod",
+      "count": 2
+    }
+  ]
 }

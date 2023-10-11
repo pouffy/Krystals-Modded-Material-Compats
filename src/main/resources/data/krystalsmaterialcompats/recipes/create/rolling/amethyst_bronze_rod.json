@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/amethyst_bronze"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/amethyst_bronze"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/amethyst_bronze"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:amethyst_bronze_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/amethyst_bronze"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:amethyst_bronze_rod",
+      "count": 2
+    }
+  ]
 }

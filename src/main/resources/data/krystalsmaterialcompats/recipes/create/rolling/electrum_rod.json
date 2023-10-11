@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/electrum"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/electrum"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/electrum"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:electrum_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/electrum"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:electrum_rod",
+      "count": 2
+    }
+  ]
 }

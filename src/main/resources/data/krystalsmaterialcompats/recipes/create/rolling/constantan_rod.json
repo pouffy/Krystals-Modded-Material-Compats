@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/constantan"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/constantan"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/constantan"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:constantan_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/constantan"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:constantan_rod",
+      "count": 2
+    }
+  ]
 }

@@ -3,19 +3,21 @@
   "conditions": [
     {
       "type": "forge:not",
-      "value": [
-        {
-          "type": "forge:tag_empty",
-          "tag": "forge:ingots/silver"
-        }
-      ]
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/silver"
+      }
     }
   ],
-  "input": {
-    "tag": "forge:ingots/silver"
-  },
-  "result": {
-    "item": "krystalsmaterialcompats:silver_rod",
-    "count": 2
-  }
+  "ingredients": [
+    {
+      "tag": "forge:ingots/silver"
+    }
+  ],
+  "results": [
+    {
+      "item": "krystalsmaterialcompats:silver_rod",
+      "count": 2
+    }
+  ]
 }

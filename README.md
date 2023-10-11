@@ -2,7 +2,7 @@
 ## Intertwining materials from different mods.
 
 ### Overview
-Ever wanted Thermal styled gears for that one random metal in that mod you play with? Or maybe Create styled sheets for Tinkering with? Look no more! I aim to add many different compatability metal items mainly for modpack makers.
+Ever wanted Thermal styled gears for that one random metal in that mod you play with? Or maybe Create styled sheets for Tinkering with? Look no more! I aim to add much different compatibility metal items mainly for modpack makers.
 
 ### Extra Info
 The style of this mod will stay shifted towards mods with a cleaner, more modern art style.
