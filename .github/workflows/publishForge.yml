@@ -25,9 +25,9 @@ jobs:
           RELEASE_BUILD: true
         run: ./gradlew :forge:build
 
-      - name: Release to Modrinth, Curseforge & Maven
+      - name: Release to Modrinth & Curseforge
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
-          MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
+          #MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
         run: ./gradlew :forge:modrinth :forge:curseforge :forge:publish
