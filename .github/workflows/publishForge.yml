@@ -23,7 +23,7 @@ jobs:
       - name: Build Forge
         env:
           RELEASE_BUILD: true
-        run: ./gradlew :forge:build
+        run: ./gradlew Build publishmod
 
       - name: Release to Curseforge
         env:
