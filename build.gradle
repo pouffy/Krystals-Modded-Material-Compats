@@ -174,11 +174,11 @@ publishMods {
         accessToken = System.getenv("CURSEFORGE_TOKEN")
         minecraftVersions.add(minecraft_version)
     }
-    modrinth {
-        projectId = modrinth_id
-        accessToken = System.getenv("MODRINTH_TOKEN")
-        minecraftVersions.add(minecraft_version)
-    }
+    //modrinth {
+    //    projectId = modrinth_id
+    //    accessToken = System.getenv("MODRINTH_TOKEN")
+    //    minecraftVersions.add(minecraft_version)
+    //}
 }
 publishing {
     publications {
