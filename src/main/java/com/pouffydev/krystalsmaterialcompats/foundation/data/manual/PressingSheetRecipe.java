@@ -22,7 +22,6 @@ public class PressingSheetRecipe {
             System.out.println("An error occurred while reading the input files.");
             e.printStackTrace();
         }
-        
     }
     public static void generateJson(String metalName) {
         String directoryPath = "src/main/resources/data/" + MaterialCompats.ID + "/recipes/create/pressing/";
