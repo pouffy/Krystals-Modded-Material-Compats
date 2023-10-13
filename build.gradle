@@ -171,7 +171,7 @@ publishMods {
 
     curseforge {
         projectId = curseforge_id
-        accessToken = System.getenv("CURSEFORGE_TOKEN")
+        accessToken = System.getProperty("CURSEFORGE_TOKEN")
         minecraftVersions.add(minecraft_version)
     }
     //modrinth {
