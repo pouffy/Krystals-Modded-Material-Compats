@@ -30,6 +30,7 @@ public enum Mods {
     the_edge("the_edge"),
     crafts_and_additions("createaddition"),
     oh_the_biomes_youll_go("byg"),
+    dreams_and_desires("create_dd"),
     ;
     
     private final String id;

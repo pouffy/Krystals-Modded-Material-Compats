@@ -14,11 +14,15 @@
     "krystalsmaterialcompats:lumium_sheet",
     "krystalsmaterialcompats:manyullyn_sheet",
     "krystalsmaterialcompats:nickel_sheet",
+    "krystalsmaterialcompats:osmium_sheet",
     "krystalsmaterialcompats:pendorite_sheet",
     "krystalsmaterialcompats:queens_slime_sheet",
+    "krystalsmaterialcompats:refined_glowstone_sheet",
+    "krystalsmaterialcompats:refined_obsidian_sheet",
     "krystalsmaterialcompats:rose_gold_sheet",
     "krystalsmaterialcompats:signalum_sheet",
     "krystalsmaterialcompats:silver_sheet",
-    "krystalsmaterialcompats:slimesteel_sheet"
+    "krystalsmaterialcompats:slimesteel_sheet",
+    "krystalsmaterialcompats:uranium_sheet"
   ]
 }

@@ -144,7 +144,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:createaddition-439890:4683727")
     runtimeOnly fg.deobf("slimeknights.tconstruct:TConstruct:${minecraft_version}-${tcon_version}")
     runtimeOnly fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}")
-    runtimeOnly fg.deobf("maven.modrinth:create-dreams-and-desires:ocohqnVU") //1.18
+    runtimeOnly fg.deobf("maven.modrinth:create-dreams-and-desires:${dreams_and_desires_version}") //1.18
+    runtimeOnly fg.deobf("maven.modrinth:mekanism:${mekanism_version}") //1.18
 }
 jar {
     manifest {

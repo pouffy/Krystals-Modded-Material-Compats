@@ -15,6 +15,7 @@ public class KMCItems {
     static CompatMetals al = CompatMetals.aluminum;
     static CompatMetals ab = CompatMetals.amethyst_bronze;
     static CompatMetals ag = CompatMetals.arcane_gold;
+    static CompatMetals br = CompatMetals.brass;
     static CompatMetals cb = CompatMetals.cobalt;
     static CompatMetals co = CompatMetals.constantan;
     static CompatMetals el = CompatMetals.electrum;
@@ -25,34 +26,43 @@ public class KMCItems {
     static CompatMetals lu = CompatMetals.lumium;
     static CompatMetals ma = CompatMetals.manyullyn;
     static CompatMetals ni = CompatMetals.nickel;
+    static CompatMetals os = CompatMetals.osmium;
     static CompatMetals pd = CompatMetals.pendorite;
     static CompatMetals qs = CompatMetals.queens_slime;
+    static CompatMetals rgs = CompatMetals.refined_glowstone;
+    static CompatMetals rb = CompatMetals.refined_obsidian;
     static CompatMetals rg = CompatMetals.rose_gold;
     static CompatMetals si = CompatMetals.signalum;
     static CompatMetals sil = CompatMetals.silver;
     static CompatMetals sl = CompatMetals.slimesteel;
+    static CompatMetals ur = CompatMetals.uranium;
+    static CompatMetals zn = CompatMetals.zinc;
     
     //compatSheets
     public static final ItemEntry<TagDependentIngredientItem>
             aluminum_sheet = compatSheet(al),
-     amethyst_bronze_sheet = compatSheet(ab),
-     arcane_gold_sheet = compatSheet(ag),
-     cobalt_sheet = compatSheet(cb),
-     constantan_sheet = compatSheet(co),
-     electrum_sheet = compatSheet(el),
-     enderium_sheet = compatSheet(en),
-     hepatizon_sheet = compatSheet(he),
-     invar_sheet = compatSheet(iv),
-     lead_sheet = compatSheet(le),
-     lumium_sheet = compatSheet(lu),
-     manyullyn_sheet = compatSheet(ma),
-     nickel_sheet = compatSheet(ni),
-     pendorite_sheet = compatSheet(pd),
-     queens_slime_sheet = compatSheet(qs),
-     rose_gold_sheet = compatSheet(rg),
-     signalum_sheet = compatSheet(si),
-     silver_sheet = compatSheet(sil),
-     slimesteel_sheet = compatSheet(sl)
+            amethyst_bronze_sheet = compatSheet(ab),
+            arcane_gold_sheet = compatSheet(ag),
+            cobalt_sheet = compatSheet(cb),
+            constantan_sheet = compatSheet(co),
+            electrum_sheet = compatSheet(el),
+            enderium_sheet = compatSheet(en),
+            hepatizon_sheet = compatSheet(he),
+            invar_sheet = compatSheet(iv),
+            lead_sheet = compatSheet(le),
+            lumium_sheet = compatSheet(lu),
+            manyullyn_sheet = compatSheet(ma),
+            nickel_sheet = compatSheet(ni),
+            osmium_sheet = compatSheet(os),
+            pendorite_sheet = compatSheet(pd),
+            queens_slime_sheet = compatSheet(qs),
+            refined_glowstone_sheet = compatSheet(rgs),
+            refined_obsidian_sheet = compatSheet(rb),
+            rose_gold_sheet = compatSheet(rg),
+            signalum_sheet = compatSheet(si),
+            silver_sheet = compatSheet(sil),
+            slimesteel_sheet = compatSheet(sl),
+            uranium_sheet = compatSheet(ur)
                     ;
     
     //compatRods
@@ -70,12 +80,16 @@ public class KMCItems {
             lumium_rod = compatMetalRod(lu),
             manyullyn_rod = compatMetalRod(ma),
             nickel_rod = compatMetalRod(ni),
+            osmium_rod = compatMetalRod(os),
             pendorite_rod = compatMetalRod(pd),
             queens_slime_rod = compatMetalRod(qs),
+            refined_glowstone_rod = compatMetalRod(rgs),
+            refined_obsidian_rod = compatMetalRod(rb),
             rose_gold_rod = compatMetalRod(rg),
             signalum_rod = compatMetalRod(si),
             silver_rod = compatMetalRod(sil),
-            slimesteel_rod = compatMetalRod(sl)
+            slimesteel_rod = compatMetalRod(sl),
+            uranium_rod = compatMetalRod(ur)
                     ;
     
     //compatUnprocessedSheets
@@ -191,6 +205,35 @@ public class KMCItems {
             signalum_dust = compatDust(si),
             silver_dust = compatDust(sil),
             slimesteel_dust = compatDust(sl)
+                    ;
+    
+    //compatGears
+    public static final ItemEntry<TagDependentIngredientItem>
+            aluminum_gear = compatGear(al),
+            amethyst_bronze_gear = compatGear(ab),
+            arcane_gold_gear = compatGear(ag),
+            brass_gear = compatGear(br),
+            cobalt_gear = compatGear(cb),
+            constantan_gear = compatGear(co),
+            electrum_gear = compatGear(el),
+            enderium_gear = compatGear(en),
+            hepatizon_gear = compatGear(he),
+            invar_gear = compatGear(iv),
+            lead_gear = compatGear(le),
+            lumium_gear = compatGear(lu),
+            manyullyn_gear = compatGear(ma),
+            nickel_gear = compatGear(ni),
+            osmium_gear = compatGear(os),
+            pendorite_gear = compatGear(pd),
+            queens_slime_gear = compatGear(qs),
+            refined_glowstone_gear = compatGear(rgs),
+            refined_obsidian_gear = compatGear(rb),
+            rose_gold_gear = compatGear(rg),
+            signalum_gear = compatGear(si),
+            silver_gear = compatGear(sil),
+            slimesteel_gear = compatGear(sl),
+            uranium_gear = compatGear(ur),
+            zinc_gear = compatGear(zn)
                     ;
     public static void register() {
     }

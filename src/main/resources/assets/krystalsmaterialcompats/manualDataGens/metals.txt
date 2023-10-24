@@ -22,3 +22,7 @@ lumium
 signalum
 arcane_gold
 pendorite
+refined_glowstone
+refined_obsidian
+uranium
+osmium

@@ -14,11 +14,15 @@
     "krystalsmaterialcompats:lumium_rod",
     "krystalsmaterialcompats:manyullyn_rod",
     "krystalsmaterialcompats:nickel_rod",
+    "krystalsmaterialcompats:osmium_rod",
     "krystalsmaterialcompats:pendorite_rod",
     "krystalsmaterialcompats:queens_slime_rod",
+    "krystalsmaterialcompats:refined_glowstone_rod",
+    "krystalsmaterialcompats:refined_obsidian_rod",
     "krystalsmaterialcompats:rose_gold_rod",
     "krystalsmaterialcompats:signalum_rod",
     "krystalsmaterialcompats:silver_rod",
-    "krystalsmaterialcompats:slimesteel_rod"
+    "krystalsmaterialcompats:slimesteel_rod",
+    "krystalsmaterialcompats:uranium_rod"
   ]
 }

@@ -4,9 +4,12 @@ import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import com.pouffydev.krystalsmaterialcompats.content.item.TagDependentIngredientItem;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AllTags;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AssetLookup;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.Tags;
 
 @SuppressWarnings("unused")
 public class KrystalsRegistryHelpers {
@@ -96,6 +99,16 @@ public class KrystalsRegistryHelpers {
                 .model(AssetLookup.compatItem("dust", metalName))
                 .register();
     }
+    public static ItemEntry<TagDependentIngredientItem> compatGear(CompatMetals metal) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_gear",
+                        props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(gears(metalName))
+                .tag(gears())
+                .model(AssetLookup.compatItem("gear", metalName))
+                .register();
+    }
     
     
     
@@ -108,9 +121,7 @@ public class KrystalsRegistryHelpers {
     public static TagKey<Item> gems(String material) {
         return AllTags.forgeItemTag("gems/" + material);
     }
-    public static TagKey<Item> rawMaterials(String material) {
-        return AllTags.forgeItemTag("raw_materials/" + material);
-    }
+    public static TagKey<Item> rawMaterials(String material) {return AllTags.forgeItemTag("raw_materials/" + material);}
     public static TagKey<Item> rods(String material) {
         return AllTags.forgeItemTag("rods/" + material);
     }
@@ -120,9 +131,8 @@ public class KrystalsRegistryHelpers {
     public static TagKey<Item> ingots(String material) {
         return AllTags.forgeItemTag("ingots/" + material);
     }
-    public static TagKey<Item> dusts(String material) {
-        return AllTags.forgeItemTag("dusts/" + material);
-    }
+    public static TagKey<Item> dusts(String material) {return AllTags.forgeItemTag("dusts/" + material);}
+    public static TagKey<Item> gears(String material) {return AllTags.forgeItemTag("gears/" + material);}
     public static TagKey<Item> nuggets(String material) {
         return AllTags.forgeItemTag("nuggets/" + material);
     }
@@ -132,15 +142,11 @@ public class KrystalsRegistryHelpers {
     public static TagKey<Item> plates() {
         return AllTags.forgeItemTag("plates");
     }
-    public static TagKey<Item> sturdyPlates(String material) {
-        return AllTags.forgeItemTag("plates/sturdy/" + material);
-    }
+    public static TagKey<Item> sturdyPlates(String material) {return AllTags.forgeItemTag("plates/sturdy/" + material);}
     public static TagKey<Item> sturdyPlates() {
         return AllTags.forgeItemTag("plates/sturdy");
     }
-    public static TagKey<Item> reinforcedPlates(String material) {
-        return AllTags.forgeItemTag("plates/reinforced/" + material);
-    }
+    public static TagKey<Item> reinforcedPlates(String material) {return AllTags.forgeItemTag("plates/reinforced/" + material);}
     public static TagKey<Item> reinforcedPlates() {
         return AllTags.forgeItemTag("plates/reinforced");
     }
@@ -153,7 +159,7 @@ public class KrystalsRegistryHelpers {
     public static TagKey<Item> dusts() {
         return AllTags.forgeItemTag("dusts");
     }
-    
+    public static TagKey<Item> gears() {return AllTags.forgeItemTag("gears");}
     public static TagKey<Item> randomiumBlacklist() {
         return AllTags.modItemTag("randomium", "blacklist");
     }
