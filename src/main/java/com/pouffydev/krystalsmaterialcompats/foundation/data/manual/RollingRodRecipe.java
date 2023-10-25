@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 
 public class RollingRodRecipe {
     public static void main(String[] args) {
-        String metalTypesFilePath = "src/main/resources/assets/" + MaterialCompats.ID + "/manualDataGens/metals.txt";
+        String metalTypesFilePath = "src/main/resources/assets/" + MaterialCompats.ID + "/manualDataGens/default.txt";
         try {
             String[] metalTypes = Files.readAllLines(Paths.get(metalTypesFilePath)).toArray(new String[0]);
             for (String metalType : metalTypes) {

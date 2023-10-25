@@ -70,6 +70,7 @@ public class KMCItems {
             aluminum_rod = compatMetalRod(al),
             amethyst_bronze_rod = compatMetalRod(ab),
             arcane_gold_rod = compatMetalRod(ag),
+            brass_rod = compatMetalRod(br),
             cobalt_rod = compatMetalRod(cb),
             constantan_rod = compatMetalRod(co),
             electrum_rod = compatMetalRod(el),
@@ -89,7 +90,8 @@ public class KMCItems {
             signalum_rod = compatMetalRod(si),
             silver_rod = compatMetalRod(sil),
             slimesteel_rod = compatMetalRod(sl),
-            uranium_rod = compatMetalRod(ur)
+            uranium_rod = compatMetalRod(ur),
+            zinc_rod = compatMetalRod(zn)
                     ;
     
     //compatUnprocessedSheets
@@ -97,6 +99,7 @@ public class KMCItems {
             unprocessed_aluminum_sheet = compatUnprocessedSheet(al),
             unprocessed_amethyst_bronze_sheet = compatUnprocessedSheet(ab),
             unprocessed_arcane_gold_sheet = compatUnprocessedSheet(ag),
+            unprocessed_brass_sheet = compatUnprocessedSheet(br),
             unprocessed_cobalt_sheet = compatUnprocessedSheet(cb),
             unprocessed_constantan_sheet = compatUnprocessedSheet(co),
             unprocessed_electrum_sheet = compatUnprocessedSheet(el),
@@ -107,12 +110,17 @@ public class KMCItems {
             unprocessed_lumium_sheet = compatUnprocessedSheet(lu),
             unprocessed_manyullyn_sheet = compatUnprocessedSheet(ma),
             unprocessed_nickel_sheet = compatUnprocessedSheet(ni),
+            unprocessed_osmium_sheet = compatUnprocessedSheet(os),
             unprocessed_pendorite_sheet = compatUnprocessedSheet(pd),
             unprocessed_queens_slime_sheet = compatUnprocessedSheet(qs),
+            unprocessed_refined_glowstone_sheet = compatUnprocessedSheet(rgs),
+            unprocessed_refined_obsidian_sheet = compatUnprocessedSheet(rb),
             unprocessed_rose_gold_sheet = compatUnprocessedSheet(rg),
             unprocessed_signalum_sheet = compatUnprocessedSheet(si),
             unprocessed_silver_sheet = compatUnprocessedSheet(sil),
-            unprocessed_slimesteel_sheet = compatUnprocessedSheet(sl)
+            unprocessed_slimesteel_sheet = compatUnprocessedSheet(sl),
+            unprocessed_uranium_sheet = compatUnprocessedSheet(ur),
+            unprocessed_zinc_sheet = compatUnprocessedSheet(zn)
                     ;
     
     //compatSturdySheets
@@ -120,6 +128,7 @@ public class KMCItems {
             sturdy_aluminum_sheet = compatSturdySheet(al),
             sturdy_amethyst_bronze_sheet = compatSturdySheet(ab),
             sturdy_arcane_gold_sheet = compatSturdySheet(ag),
+            sturdy_brass_sheet = compatSturdySheet(br),
             sturdy_cobalt_sheet = compatSturdySheet(cb),
             sturdy_constantan_sheet = compatSturdySheet(co),
             sturdy_electrum_sheet = compatSturdySheet(el),
@@ -130,12 +139,17 @@ public class KMCItems {
             sturdy_lumium_sheet = compatSturdySheet(lu),
             sturdy_manyullyn_sheet = compatSturdySheet(ma),
             sturdy_nickel_sheet = compatSturdySheet(ni),
+            sturdy_osmium_sheet = compatSturdySheet(os),
             sturdy_pendorite_sheet = compatSturdySheet(pd),
             sturdy_queens_slime_sheet = compatSturdySheet(qs),
+            sturdy_refined_glowstone_sheet = compatSturdySheet(rgs),
+            sturdy_refined_obsidian_sheet = compatSturdySheet(rb),
             sturdy_rose_gold_sheet = compatSturdySheet(rg),
             sturdy_signalum_sheet = compatSturdySheet(si),
             sturdy_silver_sheet = compatSturdySheet(sil),
-            sturdy_slimesteel_sheet = compatSturdySheet(sl)
+            sturdy_slimesteel_sheet = compatSturdySheet(sl),
+            sturdy_uranium_sheet = compatSturdySheet(ur),
+            sturdy_zinc_sheet = compatSturdySheet(zn)
             ;
     
     //compatReprocessedSheets
@@ -143,6 +157,7 @@ public class KMCItems {
             reprocessed_aluminum_sheet = compatReprocessedSheet(al),
             reprocessed_amethyst_bronze_sheet = compatReprocessedSheet(ab),
             reprocessed_arcane_gold_sheet = compatReprocessedSheet(ag),
+            reprocessed_brass_sheet = compatReprocessedSheet(br),
             reprocessed_cobalt_sheet = compatReprocessedSheet(cb),
             reprocessed_constantan_sheet = compatReprocessedSheet(co),
             reprocessed_electrum_sheet = compatReprocessedSheet(el),
@@ -153,12 +168,17 @@ public class KMCItems {
             reprocessed_lumium_sheet = compatReprocessedSheet(lu),
             reprocessed_manyullyn_sheet = compatReprocessedSheet(ma),
             reprocessed_nickel_sheet = compatReprocessedSheet(ni),
+            reprocessed_osmium_sheet = compatReprocessedSheet(os),
             reprocessed_pendorite_sheet = compatReprocessedSheet(pd),
             reprocessed_queens_slime_sheet = compatReprocessedSheet(qs),
+            reprocessed_refined_glowstone_sheet = compatReprocessedSheet(rgs),
+            reprocessed_refined_obsidian_sheet = compatReprocessedSheet(rb),
             reprocessed_rose_gold_sheet = compatReprocessedSheet(rg),
             reprocessed_signalum_sheet = compatReprocessedSheet(si),
             reprocessed_silver_sheet = compatReprocessedSheet(sil),
-            reprocessed_slimesteel_sheet = compatReprocessedSheet(sl)
+            reprocessed_slimesteel_sheet = compatReprocessedSheet(sl),
+            reprocessed_uranium_sheet = compatReprocessedSheet(ur),
+            reprocessed_zinc_sheet = compatReprocessedSheet(zn)
                     ;
     
     //compatReinforcedSheets
@@ -166,6 +186,7 @@ public class KMCItems {
             reinforced_aluminum_sheet = compatReinforcedSheet(al),
             reinforced_amethyst_bronze_sheet = compatReinforcedSheet(ab),
             reinforced_arcane_gold_sheet = compatReinforcedSheet(ag),
+            reinforced_brass_sheet = compatReinforcedSheet(br),
             reinforced_cobalt_sheet = compatReinforcedSheet(cb),
             reinforced_constantan_sheet = compatReinforcedSheet(co),
             reinforced_electrum_sheet = compatReinforcedSheet(el),
@@ -176,12 +197,18 @@ public class KMCItems {
             reinforced_lumium_sheet = compatReinforcedSheet(lu),
             reinforced_manyullyn_sheet = compatReinforcedSheet(ma),
             reinforced_nickel_sheet = compatReinforcedSheet(ni),
+            reinforced_osmium_sheet = compatReinforcedSheet(os),
             reinforced_pendorite_sheet = compatReinforcedSheet(pd),
             reinforced_queens_slime_sheet = compatReinforcedSheet(qs),
+            reinforced_refined_glowstone_sheet = compatReinforcedSheet(rgs),
+            reinforced_refined_obsidian_sheet = compatReinforcedSheet(rb),
             reinforced_rose_gold_sheet = compatReinforcedSheet(rg),
             reinforced_signalum_sheet = compatReinforcedSheet(si),
             reinforced_silver_sheet = compatReinforcedSheet(sil),
-            reinforced_slimesteel_sheet = compatReinforcedSheet(sl)
+            reinforced_slimesteel_sheet = compatReinforcedSheet(sl),
+            reinforced_uranium_sheet = compatReinforcedSheet(ur),
+            reinforced_zinc_sheet = compatReinforcedSheet(zn)
+                    ;
             ;
     
     //compatDusts
@@ -189,6 +216,7 @@ public class KMCItems {
             aluminum_dust = compatDust(al),
             amethyst_bronze_dust = compatDust(ab),
             arcane_gold_dust = compatDust(ag),
+            brass_dust = compatDust(br),
             cobalt_dust = compatDust(cb),
             constantan_dust = compatDust(co),
             electrum_dust = compatDust(el),
@@ -199,12 +227,17 @@ public class KMCItems {
             lumium_dust = compatDust(lu),
             manyullyn_dust = compatDust(ma),
             nickel_dust = compatDust(ni),
+            osmium_dust = compatDust(os),
             pendorite_dust = compatDust(pd),
             queens_slime_dust = compatDust(qs),
+            refined_glowstone_dust = compatDust(rgs),
+            refined_obsidian_dust = compatDust(rb),
             rose_gold_dust = compatDust(rg),
             signalum_dust = compatDust(si),
             silver_dust = compatDust(sil),
-            slimesteel_dust = compatDust(sl)
+            slimesteel_dust = compatDust(sl),
+            uranium_dust = compatDust(ur),
+            zinc_dust = compatDust(zn)
                     ;
     
     //compatGears

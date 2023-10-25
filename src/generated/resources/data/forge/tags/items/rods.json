@@ -4,6 +4,7 @@
     "krystalsmaterialcompats:aluminum_rod",
     "krystalsmaterialcompats:amethyst_bronze_rod",
     "krystalsmaterialcompats:arcane_gold_rod",
+    "krystalsmaterialcompats:brass_rod",
     "krystalsmaterialcompats:cobalt_rod",
     "krystalsmaterialcompats:constantan_rod",
     "krystalsmaterialcompats:electrum_rod",
@@ -23,6 +24,7 @@
     "krystalsmaterialcompats:signalum_rod",
     "krystalsmaterialcompats:silver_rod",
     "krystalsmaterialcompats:slimesteel_rod",
-    "krystalsmaterialcompats:uranium_rod"
+    "krystalsmaterialcompats:uranium_rod",
+    "krystalsmaterialcompats:zinc_rod"
   ]
 }
