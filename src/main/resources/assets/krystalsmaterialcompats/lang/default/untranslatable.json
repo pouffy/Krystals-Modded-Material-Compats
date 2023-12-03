@@ -1,4 +1,10 @@
 {
   "itemGroup.krystalsmaterialcompats": "Krystal's Material Compats",
-  "krystalsmaterialcompats.item.missing_tag": "Missing tag: %s"
+  "krystalsmaterialcompats.item.missing_tag": "Missing tag: %s",
+  "krystalsmaterialcompats.item.tag_notifier": "This metal category requires the tag: %s",
+
+  "gui.button.krystalsmaterialcompats.scroll_filters_up": "Scroll Filters Up",
+  "gui.button.krystalsmaterialcompats.scroll_filters_down": "Scroll Filters Down",
+  "gui.button.krystalsmaterialcompats.enable_filters": "Enable All Filters",
+  "gui.button.krystalsmaterialcompats.disable_filters": "Disable All Filters"
 }

@@ -1,6 +1,6 @@
 package com.pouffydev.krystalsmaterialcompats.foundation;
 
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
+import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +45,7 @@ public enum CompatMetals {
     private final String name;
     
     CompatMetals(Mods... mods) {
-        this.name = Lang.asId(name());
+        this.name = KrystalCoreLang.asId(name());
         this.mods = mods;
     }
     public static List<CompatMetals> getAllMaterials() {
@@ -54,9 +54,20 @@ public enum CompatMetals {
     public String getName() {
         return name;
     }
-    public String getCapitalizedName() {
+    public String getCapitalizedName(String str) {
         //Capitalize the first letter of each word and replace "_" with " "
-        return name().substring(0, 1).toUpperCase() + name().substring(1).toLowerCase().replace("_", " ");
+        StringBuilder result = new StringBuilder();
+        String[] words = str.split("_");
+        for (String word : words) {
+            // capitalize the first letter of the word and append it to the result
+            result.append(word.substring(0, 1).toUpperCase());
+            // append the rest of the word to the result
+            result.append(word.substring(1));
+            // append a space character to the result
+            result.append(" ");
+        }
+        // trim the trailing space and return the result as a string
+        return result.toString().trim();
     }
     
     /**

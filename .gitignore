@@ -23,3 +23,4 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+/src/main/resources/resourcepacks/krystals_material_resprites/assets/tconstruct/textures/item/tool/armor/plate/shield_large_modifiers/tconstruct_embellishment_broken_tconstruct_copper_oxidized.png

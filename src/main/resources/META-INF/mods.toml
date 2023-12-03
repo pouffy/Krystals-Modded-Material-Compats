@@ -7,8 +7,8 @@ modId="krystalsmaterialcompats"
 version="${file.jarVersion}"
 displayName="Krystal's Material Compats"
 logoFile="krystalsmaterialcompats.png"
-credits="Thanks for this example mod goes to Java"
-authors="Love, Cheese and small house plants"
+credits="PouffyDev, MrCrayfish(Creative Tab Filter)"
+authors="PouffyDev"
 description='''
 '''
 [[dependencies.krystalsmaterialcompats]]
@@ -21,5 +21,11 @@ description='''
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.krystalsmaterialcompats]]
+    modId="krystal_core"
+    mandatory=true
+    versionRange="[1.18.2-1.0.1,)"
     ordering="NONE"
     side="BOTH"

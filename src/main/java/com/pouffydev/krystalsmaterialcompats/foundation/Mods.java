@@ -1,6 +1,7 @@
 package com.pouffydev.krystalsmaterialcompats.foundation;
 
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
+import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
+import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
@@ -77,7 +78,7 @@ public enum Mods {
         return id;
     }
     public Component getDisplayName() {
-        return Lang.translateDirect("mod." + id);
+        return KrystalCoreLang.translateDirect(MaterialCompats.ID, "mod." + id);
     }
     
     class Builder {

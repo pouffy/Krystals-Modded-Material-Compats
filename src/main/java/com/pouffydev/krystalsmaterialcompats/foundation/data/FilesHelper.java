@@ -5,8 +5,8 @@ import com.google.gson.JsonParser;
 import com.google.gson.internal.Streams;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
 import net.minecraft.nbt.CompoundTag;
 
 import java.io.BufferedReader;
@@ -40,7 +40,7 @@ public class FilesHelper {
     }
     
     public static String slug(String name) {
-        return Lang.asId(name)
+        return KrystalCoreLang.asId(name)
                 .replaceAll("\\W+", "_");
     }
     

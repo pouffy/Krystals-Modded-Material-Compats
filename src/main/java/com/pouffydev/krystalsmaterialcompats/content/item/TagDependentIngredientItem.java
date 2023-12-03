@@ -1,7 +1,7 @@
 package com.pouffydev.krystalsmaterialcompats.content.item;
 
-import com.pouffydev.krystalsmaterialcompats.foundation.Mods;
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
+import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
+import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -11,14 +11,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.List;
 
 public class TagDependentIngredientItem extends Item {
@@ -46,7 +43,7 @@ public class TagDependentIngredientItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
         if (shouldHide()) {
-            tooltip.add(Lang.translateDirect("item.missing_tag", getTagID()).withStyle(ChatFormatting.DARK_RED));
+            tooltip.add(KrystalCoreLang.translateDirect(MaterialCompats.ID, "item.missing_tag", getTagID()).withStyle(ChatFormatting.DARK_RED));
         }
         
     }

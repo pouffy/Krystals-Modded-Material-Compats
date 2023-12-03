@@ -1,15 +1,16 @@
 package com.pouffydev.krystalsmaterialcompats.foundation.data;
 
 import com.google.gson.JsonElement;
+import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
+import com.pouffydev.krystal_core.foundation.data.lang.LangPartial;
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.Lang;
-import com.pouffydev.krystalsmaterialcompats.foundation.data.lang.LangPartial;
 
 import java.util.function.Supplier;
 
 public enum AllLangPartials implements LangPartial {
     UNTRANSLATABLE("Stuff the data generator can't translate"),
     MOD_IDS("Mod IDs"),
+    CATEGORIES("Item Group Categories"),
     ;
     
     private final String displayName;
@@ -17,7 +18,7 @@ public enum AllLangPartials implements LangPartial {
     
     private AllLangPartials(String displayName) {
         this.displayName = displayName;
-        String fileName = Lang.asId(name());
+        String fileName = KrystalCoreLang.asId(name());
         this.provider = () -> LangPartial.fromResource(MaterialCompats.ID, fileName);
     }
     
