@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:cobalt_sheet",
+    "krystalsmaterialcompats:cobalt_rod",
+    "krystalsmaterialcompats:unprocessed_cobalt_sheet",
+    "krystalsmaterialcompats:sturdy_cobalt_sheet",
+    "krystalsmaterialcompats:reprocessed_cobalt_sheet",
+    "krystalsmaterialcompats:reinforced_cobalt_sheet",
+    "krystalsmaterialcompats:cobalt_dust",
+    "krystalsmaterialcompats:cobalt_gear",
+    "krystalsmaterialcompats:cobalt_coin",
+    "krystalsmaterialcompats:cobalt_plate",
+    "krystalsmaterialcompats:cobalt_tag_notifier"
+  ]
+}

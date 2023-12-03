@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:aluminum_dust",
+    "krystalsmaterialcompats:amethyst_bronze_dust",
+    "krystalsmaterialcompats:arcane_gold_dust",
+    "krystalsmaterialcompats:brass_dust",
+    "krystalsmaterialcompats:cobalt_dust",
+    "krystalsmaterialcompats:constantan_dust",
+    "krystalsmaterialcompats:electrum_dust",
+    "krystalsmaterialcompats:enderium_dust",
+    "krystalsmaterialcompats:hepatizon_dust",
+    "krystalsmaterialcompats:invar_dust",
+    "krystalsmaterialcompats:lead_dust",
+    "krystalsmaterialcompats:lumium_dust",
+    "krystalsmaterialcompats:manyullyn_dust",
+    "krystalsmaterialcompats:nickel_dust",
+    "krystalsmaterialcompats:osmium_dust",
+    "krystalsmaterialcompats:pendorite_dust",
+    "krystalsmaterialcompats:queens_slime_dust",
+    "krystalsmaterialcompats:refined_glowstone_dust",
+    "krystalsmaterialcompats:refined_obsidian_dust",
+    "krystalsmaterialcompats:rose_gold_dust",
+    "krystalsmaterialcompats:signalum_dust",
+    "krystalsmaterialcompats:silver_dust",
+    "krystalsmaterialcompats:slimesteel_dust",
+    "krystalsmaterialcompats:uranium_dust",
+    "krystalsmaterialcompats:zinc_dust"
+  ]
+}

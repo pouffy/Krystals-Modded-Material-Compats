@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "krystalsmaterialcompats:item/coin/count2/refined_obsidian"
+  }
+}

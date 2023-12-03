@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "krystalsmaterialcompats:item/missing_tag_notifier"
+  }
+}

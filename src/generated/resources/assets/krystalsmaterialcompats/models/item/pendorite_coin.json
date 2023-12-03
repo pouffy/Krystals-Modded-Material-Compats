@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "krystalsmaterialcompats:item/coin/count4/pendorite"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "krystal_core:count": 0.0
+      },
+      "model": "krystalsmaterialcompats:item/coin/pendorite_0"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 0.03125
+      },
+      "model": "krystalsmaterialcompats:item/coin/pendorite_1"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 0.25
+      },
+      "model": "krystalsmaterialcompats:item/coin/pendorite_2"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 0.5
+      },
+      "model": "krystalsmaterialcompats:item/coin/pendorite_3"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 1.0
+      },
+      "model": "krystalsmaterialcompats:item/coin/pendorite_4"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:unprocessed_lumium_sheet",
+    "krystalsmaterialcompats:sturdy_lumium_sheet",
+    "krystalsmaterialcompats:reprocessed_lumium_sheet"
+  ]
+}

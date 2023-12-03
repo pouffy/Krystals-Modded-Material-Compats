@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:amethyst_bronze_sheet",
+    "krystalsmaterialcompats:amethyst_bronze_rod",
+    "krystalsmaterialcompats:unprocessed_amethyst_bronze_sheet",
+    "krystalsmaterialcompats:sturdy_amethyst_bronze_sheet",
+    "krystalsmaterialcompats:reprocessed_amethyst_bronze_sheet",
+    "krystalsmaterialcompats:reinforced_amethyst_bronze_sheet",
+    "krystalsmaterialcompats:amethyst_bronze_dust",
+    "krystalsmaterialcompats:amethyst_bronze_gear",
+    "krystalsmaterialcompats:amethyst_bronze_coin",
+    "krystalsmaterialcompats:amethyst_bronze_plate",
+    "krystalsmaterialcompats:amethyst_bronze_tag_notifier"
+  ]
+}

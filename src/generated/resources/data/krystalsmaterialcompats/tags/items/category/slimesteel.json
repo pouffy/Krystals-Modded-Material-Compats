@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:slimesteel_sheet",
+    "krystalsmaterialcompats:slimesteel_rod",
+    "krystalsmaterialcompats:unprocessed_slimesteel_sheet",
+    "krystalsmaterialcompats:sturdy_slimesteel_sheet",
+    "krystalsmaterialcompats:reprocessed_slimesteel_sheet",
+    "krystalsmaterialcompats:reinforced_slimesteel_sheet",
+    "krystalsmaterialcompats:slimesteel_dust",
+    "krystalsmaterialcompats:slimesteel_gear",
+    "krystalsmaterialcompats:slimesteel_coin",
+    "krystalsmaterialcompats:slimesteel_plate",
+    "krystalsmaterialcompats:slimesteel_tag_notifier"
+  ]
+}

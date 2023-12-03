@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:enderium_sheet",
+    "krystalsmaterialcompats:enderium_rod",
+    "krystalsmaterialcompats:unprocessed_enderium_sheet",
+    "krystalsmaterialcompats:sturdy_enderium_sheet",
+    "krystalsmaterialcompats:reprocessed_enderium_sheet",
+    "krystalsmaterialcompats:reinforced_enderium_sheet",
+    "krystalsmaterialcompats:enderium_dust",
+    "krystalsmaterialcompats:enderium_gear",
+    "krystalsmaterialcompats:enderium_tag_notifier"
+  ]
+}

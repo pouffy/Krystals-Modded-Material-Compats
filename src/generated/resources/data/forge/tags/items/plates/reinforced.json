@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:reinforced_aluminum_sheet",
+    "krystalsmaterialcompats:reinforced_amethyst_bronze_sheet",
+    "krystalsmaterialcompats:reinforced_arcane_gold_sheet",
+    "krystalsmaterialcompats:reinforced_brass_sheet",
+    "krystalsmaterialcompats:reinforced_cobalt_sheet",
+    "krystalsmaterialcompats:reinforced_constantan_sheet",
+    "krystalsmaterialcompats:reinforced_electrum_sheet",
+    "krystalsmaterialcompats:reinforced_enderium_sheet",
+    "krystalsmaterialcompats:reinforced_hepatizon_sheet",
+    "krystalsmaterialcompats:reinforced_invar_sheet",
+    "krystalsmaterialcompats:reinforced_lead_sheet",
+    "krystalsmaterialcompats:reinforced_lumium_sheet",
+    "krystalsmaterialcompats:reinforced_manyullyn_sheet",
+    "krystalsmaterialcompats:reinforced_nickel_sheet",
+    "krystalsmaterialcompats:reinforced_osmium_sheet",
+    "krystalsmaterialcompats:reinforced_pendorite_sheet",
+    "krystalsmaterialcompats:reinforced_queens_slime_sheet",
+    "krystalsmaterialcompats:reinforced_refined_glowstone_sheet",
+    "krystalsmaterialcompats:reinforced_refined_obsidian_sheet",
+    "krystalsmaterialcompats:reinforced_rose_gold_sheet",
+    "krystalsmaterialcompats:reinforced_signalum_sheet",
+    "krystalsmaterialcompats:reinforced_silver_sheet",
+    "krystalsmaterialcompats:reinforced_slimesteel_sheet",
+    "krystalsmaterialcompats:reinforced_uranium_sheet",
+    "krystalsmaterialcompats:reinforced_zinc_sheet"
+  ]
+}

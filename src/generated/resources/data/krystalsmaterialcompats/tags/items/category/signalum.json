@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:signalum_sheet",
+    "krystalsmaterialcompats:signalum_rod",
+    "krystalsmaterialcompats:unprocessed_signalum_sheet",
+    "krystalsmaterialcompats:sturdy_signalum_sheet",
+    "krystalsmaterialcompats:reprocessed_signalum_sheet",
+    "krystalsmaterialcompats:reinforced_signalum_sheet",
+    "krystalsmaterialcompats:signalum_dust",
+    "krystalsmaterialcompats:signalum_gear",
+    "krystalsmaterialcompats:signalum_tag_notifier"
+  ]
+}

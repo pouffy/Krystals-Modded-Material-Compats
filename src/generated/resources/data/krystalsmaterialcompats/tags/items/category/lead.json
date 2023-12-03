@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:lead_sheet",
+    "krystalsmaterialcompats:lead_rod",
+    "krystalsmaterialcompats:unprocessed_lead_sheet",
+    "krystalsmaterialcompats:sturdy_lead_sheet",
+    "krystalsmaterialcompats:reprocessed_lead_sheet",
+    "krystalsmaterialcompats:reinforced_lead_sheet",
+    "krystalsmaterialcompats:lead_dust",
+    "krystalsmaterialcompats:lead_gear",
+    "krystalsmaterialcompats:lead_coin",
+    "krystalsmaterialcompats:lead_plate",
+    "krystalsmaterialcompats:lead_tag_notifier"
+  ]
+}

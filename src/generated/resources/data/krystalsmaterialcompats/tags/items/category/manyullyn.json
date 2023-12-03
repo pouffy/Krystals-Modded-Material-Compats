@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:manyullyn_sheet",
+    "krystalsmaterialcompats:manyullyn_rod",
+    "krystalsmaterialcompats:unprocessed_manyullyn_sheet",
+    "krystalsmaterialcompats:sturdy_manyullyn_sheet",
+    "krystalsmaterialcompats:reprocessed_manyullyn_sheet",
+    "krystalsmaterialcompats:reinforced_manyullyn_sheet",
+    "krystalsmaterialcompats:manyullyn_dust",
+    "krystalsmaterialcompats:manyullyn_gear",
+    "krystalsmaterialcompats:manyullyn_coin",
+    "krystalsmaterialcompats:manyullyn_plate",
+    "krystalsmaterialcompats:manyullyn_tag_notifier"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:constantan_sheet",
+    "krystalsmaterialcompats:constantan_rod",
+    "krystalsmaterialcompats:unprocessed_constantan_sheet",
+    "krystalsmaterialcompats:sturdy_constantan_sheet",
+    "krystalsmaterialcompats:reprocessed_constantan_sheet",
+    "krystalsmaterialcompats:reinforced_constantan_sheet",
+    "krystalsmaterialcompats:constantan_dust",
+    "krystalsmaterialcompats:constantan_gear",
+    "krystalsmaterialcompats:constantan_tag_notifier"
+  ]
+}

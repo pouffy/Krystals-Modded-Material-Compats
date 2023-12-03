@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "krystalsmaterialcompats:item/plate/count3/silver"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "krystal_core:count": 0.0
+      },
+      "model": "krystalsmaterialcompats:item/plate/silver_0"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 0.25
+      },
+      "model": "krystalsmaterialcompats:item/plate/silver_1"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 0.5
+      },
+      "model": "krystalsmaterialcompats:item/plate/silver_2"
+    },
+    {
+      "predicate": {
+        "krystal_core:count": 1.0
+      },
+      "model": "krystalsmaterialcompats:item/plate/silver_3"
+    }
+  ]
+}

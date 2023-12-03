@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:silver_sheet",
+    "krystalsmaterialcompats:silver_rod",
+    "krystalsmaterialcompats:unprocessed_silver_sheet",
+    "krystalsmaterialcompats:sturdy_silver_sheet",
+    "krystalsmaterialcompats:reprocessed_silver_sheet",
+    "krystalsmaterialcompats:reinforced_silver_sheet",
+    "krystalsmaterialcompats:silver_dust",
+    "krystalsmaterialcompats:silver_gear",
+    "krystalsmaterialcompats:silver_coin",
+    "krystalsmaterialcompats:silver_plate",
+    "krystalsmaterialcompats:silver_tag_notifier"
+  ]
+}

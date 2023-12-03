@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:invar_sheet",
+    "krystalsmaterialcompats:invar_rod",
+    "krystalsmaterialcompats:unprocessed_invar_sheet",
+    "krystalsmaterialcompats:sturdy_invar_sheet",
+    "krystalsmaterialcompats:reprocessed_invar_sheet",
+    "krystalsmaterialcompats:reinforced_invar_sheet",
+    "krystalsmaterialcompats:invar_dust",
+    "krystalsmaterialcompats:invar_gear",
+    "krystalsmaterialcompats:invar_tag_notifier"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:zinc_rod",
+    "krystalsmaterialcompats:unprocessed_zinc_sheet",
+    "krystalsmaterialcompats:sturdy_zinc_sheet",
+    "krystalsmaterialcompats:reprocessed_zinc_sheet",
+    "krystalsmaterialcompats:reinforced_zinc_sheet",
+    "krystalsmaterialcompats:zinc_dust",
+    "krystalsmaterialcompats:zinc_gear",
+    "krystalsmaterialcompats:zinc_coin",
+    "krystalsmaterialcompats:zinc_plate",
+    "krystalsmaterialcompats:zinc_tag_notifier"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:unprocessed_uranium_sheet",
+    "krystalsmaterialcompats:sturdy_uranium_sheet",
+    "krystalsmaterialcompats:reprocessed_uranium_sheet"
+  ]
+}

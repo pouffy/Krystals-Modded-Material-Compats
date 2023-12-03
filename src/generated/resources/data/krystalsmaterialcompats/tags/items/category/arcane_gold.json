@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:arcane_gold_sheet",
+    "krystalsmaterialcompats:arcane_gold_rod",
+    "krystalsmaterialcompats:unprocessed_arcane_gold_sheet",
+    "krystalsmaterialcompats:sturdy_arcane_gold_sheet",
+    "krystalsmaterialcompats:reprocessed_arcane_gold_sheet",
+    "krystalsmaterialcompats:reinforced_arcane_gold_sheet",
+    "krystalsmaterialcompats:arcane_gold_dust",
+    "krystalsmaterialcompats:arcane_gold_gear",
+    "krystalsmaterialcompats:arcane_gold_coin",
+    "krystalsmaterialcompats:arcane_gold_plate",
+    "krystalsmaterialcompats:arcane_gold_tag_notifier"
+  ]
+}

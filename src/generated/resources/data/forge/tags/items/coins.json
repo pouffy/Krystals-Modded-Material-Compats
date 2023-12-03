@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:aluminum_coin",
+    "krystalsmaterialcompats:amethyst_bronze_coin",
+    "krystalsmaterialcompats:arcane_gold_coin",
+    "krystalsmaterialcompats:brass_coin",
+    "krystalsmaterialcompats:cobalt_coin",
+    "krystalsmaterialcompats:electrum_coin",
+    "krystalsmaterialcompats:hepatizon_coin",
+    "krystalsmaterialcompats:lead_coin",
+    "krystalsmaterialcompats:manyullyn_coin",
+    "krystalsmaterialcompats:nickel_coin",
+    "krystalsmaterialcompats:osmium_coin",
+    "krystalsmaterialcompats:pendorite_coin",
+    "krystalsmaterialcompats:queens_slime_coin",
+    "krystalsmaterialcompats:refined_glowstone_coin",
+    "krystalsmaterialcompats:refined_obsidian_coin",
+    "krystalsmaterialcompats:rose_gold_coin",
+    "krystalsmaterialcompats:silver_coin",
+    "krystalsmaterialcompats:slimesteel_coin",
+    "krystalsmaterialcompats:uranium_coin",
+    "krystalsmaterialcompats:zinc_coin"
+  ]
+}
