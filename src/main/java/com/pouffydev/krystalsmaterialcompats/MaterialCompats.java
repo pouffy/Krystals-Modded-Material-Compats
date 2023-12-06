@@ -10,10 +10,8 @@ import com.pouffydev.krystalsmaterialcompats.foundation.data.recipe.Recipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,11 +19,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -44,7 +40,6 @@ public class MaterialCompats
     public MaterialCompats()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
@@ -59,11 +54,6 @@ public class MaterialCompats
     }
     private void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(MaterialCompatsClient::setup);
-    }
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -83,24 +73,15 @@ public class MaterialCompats
     {
         LOGGER.info("HELLO from server starting");
     }
-
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents
-    {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-        {
-            LOGGER.info("HELLO from Register Block");
-        }
-    }
+    
     public static void gatherData(@NotNull GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
         if (event.includeClient()) {
-            gen.addProvider(new KrystalCoreLangMerger(gen, ID, "Krystal's Material Compats", AllLangPartials.values()));
+            gen.addProvider(true, new KrystalCoreLangMerger(gen, ID, "Krystal's Material Compats", AllLangPartials.values()));
         }
         if (event.includeServer()) {
             //gen.addProvider(new MWAdvancements(gen));
-            gen.addProvider(new Recipes(gen));
+            gen.addProvider(true, new Recipes(gen));
         }
     }
     @Contract("_ -> new")

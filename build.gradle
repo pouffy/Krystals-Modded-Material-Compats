@@ -4,20 +4,21 @@ buildscript {
         mavenCentral()
         jcenter()
         maven { url = 'https://repo.spongepowered.org/repository/maven-public' }
+        maven { url = 'https://maven.parchmentmc.org' }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath "net.minecraftforge.gradle:ForgeGradle:${forgegradle_version}"
         classpath "org.spongepowered:mixingradle:${mixingradle_version}"
+        classpath "org.parchmentmc:librarian:${librarian_version}"
     }
 }
-
 plugins {
-    id 'eclipse'
-    id 'maven-publish'
-    id 'com.matthewprenger.cursegradle' version '1.4.0'
-    id "me.modmuss50.mod-publish-plugin" version "0.3.5"
+    id 'com.matthewprenger.cursegradle' version "${cursegradle_version}"
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
 
@@ -29,7 +30,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -133,19 +134,20 @@ dependencies {
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation fg.deobf("curse.maven:krystal-core-937451:${krystal_core_version}")
 
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
-    annotationProcessor "org.spongepowered:mixin:0.8.3:processor"
-    testAnnotationProcessor "org.spongepowered:mixin:0.8.3:processor"
+    annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
+    testAnnotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 
     // Mods this supports (for testing)
     runtimeOnly fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false } //1.18
     runtimeOnly fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}") //1.18 (Dependency of Create)
     runtimeOnly fg.deobf("curse.maven:createaddition-${createaddition_project}:${createaddition_version}") //1.18
-    runtimeOnly fg.deobf("slimeknights.tconstruct:TConstruct:${minecraft_version}-${tcon_version}") //1.18
+    //runtimeOnly fg.deobf("slimeknights.tconstruct:TConstruct:${minecraft_version}-${tcon_version}") //1.18
     runtimeOnly fg.deobf("curse.maven:cofhcore-${cofh_core_project}:${cofh_core_version}") //1.18 (Dependency of Thermal)
-    runtimeOnly fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}") //1.18 (Dependency of Tinker's Construct)
+    //runtimeOnly fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}") //1.18 (Dependency of Tinker's Construct)
     runtimeOnly fg.deobf("maven.modrinth:create-dreams-and-desires:${dreams_and_desires_version}") //1.18
     runtimeOnly fg.deobf("maven.modrinth:mekanism:${mekanism_version}") //1.18
     runtimeOnly fg.deobf("curse.maven:thermalfoundation-${thermal_project}:${thermal_foundation_version}") //1.18
@@ -166,25 +168,25 @@ jar {
     }
 }
 jar.finalizedBy('reobfJar')
-publishMods {
-    file = jar.archiveFile
-    version = "$mod_version-forge-mc$minecraft_version"
-    changelog = getChangelogText("Forge", true)
-    type = STABLE
-    displayName = "Krystal's Material Compats $mod_version Forge $minecraft_version"
-    modLoaders.add("forge")
-
-    curseforge {
-        projectId = curseforge_id
-        accessToken = System.getProperty("CURSEFORGE_TOKEN")
-        minecraftVersions.add(minecraft_version)
-    }
-    //modrinth {
-    //    projectId = modrinth_id
-    //    accessToken = System.getenv("MODRINTH_TOKEN")
-    //    minecraftVersions.add(minecraft_version)
-    //}
-}
+//publishMods {
+//    file = jar.archiveFile
+//    version = "$mod_version-forge-mc$minecraft_version"
+//    changelog = getChangelogText("Forge", true)
+//    type = STABLE
+//    displayName = "Krystal's Material Compats $mod_version Forge $minecraft_version"
+//    modLoaders.add("forge")
+//
+//    curseforge {
+//        projectId = curseforge_id
+//        accessToken = System.getProperty("CURSEFORGE_TOKEN")
+//        minecraftVersions.add(minecraft_version)
+//    }
+//    //modrinth {
+//    //    projectId = modrinth_id
+//    //    accessToken = System.getenv("MODRINTH_TOKEN")
+//    //    minecraftVersions.add(minecraft_version)
+//    //}
+//}
 publishing {
     publications {
         mavenJava(MavenPublication) {

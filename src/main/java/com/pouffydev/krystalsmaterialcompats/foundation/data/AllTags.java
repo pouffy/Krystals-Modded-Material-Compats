@@ -1,5 +1,6 @@
 package com.pouffydev.krystalsmaterialcompats.foundation.data;
 
+import com.pouffydev.krystal_core.foundation.KrystalCoreTags;
 import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLang;
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import com.pouffydev.krystalsmaterialcompats.foundation.CompatMetals;
@@ -17,10 +18,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import java.util.Collections;
 
 import static com.pouffydev.krystalsmaterialcompats.foundation.data.AllTags.NameSpace.MOD;
 
@@ -50,41 +47,18 @@ public class AllTags {
     static String sl = CompatMetals.slimesteel.getName();
     static String ur = CompatMetals.uranium.getName();
     static String zn = CompatMetals.zinc.getName();
-    public static <T extends IForgeRegistryEntry<T>> TagKey<T> optionalTag(IForgeRegistry<T> registry,
-                                                                           ResourceLocation id) {
-        return registry.tags()
-                .createOptionalTagKey(id, Collections.emptySet());
-    }
-    public static <T extends IForgeRegistryEntry<T>> TagKey<T> minecraftTag(IForgeRegistry<T> registry, String path) {
-        return optionalTag(registry, new ResourceLocation("minecraft", path));
-    }
-    public static <T extends IForgeRegistryEntry<T>> TagKey<T> modTag(IForgeRegistry<T> registry, String modID, String path) {
-        return optionalTag(registry, new ResourceLocation(modID, path));
-    }
-    public static <T extends IForgeRegistryEntry<T>> TagKey<T> modTag(IForgeRegistry<T> registry, String path) {
-        return optionalTag(registry, new ResourceLocation(MaterialCompats.ID, path));
-    }
-    public static TagKey<Item> modItemTag(String modID, String path) {
-        return modTag(ForgeRegistries.ITEMS, modID, path);
-    }
-    public static TagKey<Item> modItemTag(String path) {
-        return modTag(ForgeRegistries.ITEMS, MaterialCompats.ID, path);
-    }
-    public static <T extends IForgeRegistryEntry<T>> TagKey<T> forgeTag(IForgeRegistry<T> registry, String path) {
-        return optionalTag(registry, new ResourceLocation("forge", path));
-    }
     
     public static TagKey<Block> forgeBlockTag(String path) {
-        return forgeTag(ForgeRegistries.BLOCKS, path);
+        return KrystalCoreTags.forgeTag(ForgeRegistries.BLOCKS, path);
     }
     
     
     public static TagKey<Item> forgeItemTag(String path) {
-        return forgeTag(ForgeRegistries.ITEMS, path);
+        return KrystalCoreTags.forgeTag(ForgeRegistries.ITEMS, path);
     }
     
     public static TagKey<Fluid> forgeFluidTag(String path) {
-        return forgeTag(ForgeRegistries.FLUIDS, path);
+        return KrystalCoreTags.forgeTag(ForgeRegistries.FLUIDS, path);
     }
     
     @Deprecated(forRemoval = true)
@@ -184,7 +158,7 @@ public class AllTags {
         private AllCompatItemTags(NameSpace namespace, String path, boolean optional, boolean alwaysDatagen) {
             ResourceLocation id = new ResourceLocation(namespace.id, path == null ? KrystalCoreLang.asId(this.name()) : path);
             if (optional) {
-                this.tag = optionalTag(ForgeRegistries.ITEMS, id);
+                this.tag = KrystalCoreTags.optionalTag(ForgeRegistries.ITEMS, id);
             } else {
                 this.tag = ItemTags.create(id);
             }

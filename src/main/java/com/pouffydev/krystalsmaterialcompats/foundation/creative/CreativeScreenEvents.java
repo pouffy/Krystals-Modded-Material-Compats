@@ -9,7 +9,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
 import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -45,13 +46,13 @@ public class CreativeScreenEvents {
     private int guiCenterY = 0;
     
     @SubscribeEvent
-    public void onPlayerLogout(ClientPlayerNetworkEvent.LoggedOutEvent event)
+    public void onPlayerLogout(ClientPlayerNetworkEvent.LoggingOut event)
     {
         this.filters = null;
     }
     
     @SubscribeEvent
-    public void onScreenInit(ScreenEvent.InitScreenEvent.Post event)
+    public void onScreenInit(ScreenEvent.Init.Post event)
     {
         if(event.getScreen() instanceof CreativeModeInventoryScreen creativeScreen)
         {
@@ -65,17 +66,17 @@ public class CreativeScreenEvents {
             this.guiCenterY = creativeScreen.getGuiTop();
             this.buttons = new ArrayList<>();
             
-            event.addListener(this.btnScrollUp = new IconButton(this.guiCenterX - 22, this.guiCenterY - 12, new TranslatableComponent("gui.button.krystalsmaterialcompats.scroll_filters_up"), button -> {
+            event.addListener(this.btnScrollUp = new IconButton(this.guiCenterX - 22, this.guiCenterY - 12, Component.translatable("gui.button.krystalsmaterialcompats.scroll_filters_up"), button -> {
                 if(startIndex > 0) startIndex--;
                 this.updateTagButtons();
             }, ICONS, 64, 0));
             
-            event.addListener(this.btnScrollDown = new IconButton(this.guiCenterX - 22, this.guiCenterY + 127, new TranslatableComponent("gui.button.krystalsmaterialcompats.scroll_filters_down"), button -> {
+            event.addListener(this.btnScrollDown = new IconButton(this.guiCenterX - 22, this.guiCenterY + 127, Component.translatable("gui.button.krystalsmaterialcompats.scroll_filters_down"), button -> {
                 if(startIndex <= filters.size() - 4 - 1) startIndex++;
                 this.updateTagButtons();
             }, ICONS, 80, 0));
             
-            event.addListener(this.btnEnableAll = new IconButton(this.guiCenterX - 50, this.guiCenterY + 10, new TranslatableComponent("gui.button.krystalsmaterialcompats.enable_filters"), button -> {
+            event.addListener(this.btnEnableAll = new IconButton(this.guiCenterX - 50, this.guiCenterY + 10, Component.translatable("gui.button.krystalsmaterialcompats.enable_filters"), button -> {
                 this.filters.forEach(filters -> filters.setEnabled(true));
                 this.buttons.forEach(TagButton::updateState);
                 Screen screen = Minecraft.getInstance().screen;
@@ -85,7 +86,7 @@ public class CreativeScreenEvents {
                 }
             }, ICONS, 96, 0));
             
-            event.addListener(this.btnDisableAll = new IconButton(this.guiCenterX - 50, this.guiCenterY + 32, new TranslatableComponent("gui.button.krystalsmaterialcompats.disable_filters"), button -> {
+            event.addListener(this.btnDisableAll = new IconButton(this.guiCenterX - 50, this.guiCenterY + 32, Component.translatable("gui.button.krystalsmaterialcompats.disable_filters"), button -> {
                 this.filters.forEach(filters -> filters.setEnabled(false));
                 this.buttons.forEach(TagButton::updateState);
                 Screen screen = Minecraft.getInstance().screen;
@@ -116,7 +117,7 @@ public class CreativeScreenEvents {
     }
     
     @SubscribeEvent
-    public void onScreenClick(ScreenEvent.MouseClickedEvent.Pre event)
+    public void onScreenClick(ScreenEvent.MouseButtonPressed.Pre event)
     {
         if(event.getButton() != GLFW.GLFW_MOUSE_BUTTON_LEFT)
             return;
@@ -137,7 +138,7 @@ public class CreativeScreenEvents {
     }
     
     @SubscribeEvent
-    public void onScreenDrawPre(ScreenEvent.DrawScreenEvent.Pre event)
+    public void onScreenDrawPre(ScreenEvent.Init.Pre event)
     {
         if(event.getScreen() instanceof CreativeModeInventoryScreen creativeScreen)
         {
@@ -157,7 +158,7 @@ public class CreativeScreenEvents {
     }
     
     @SubscribeEvent
-    public void onScreenDrawPost(ScreenEvent.DrawScreenEvent.Post event)
+    public void onScreenDrawPost(ScreenEvent.Render.Post event)
     {
         if(event.getScreen() instanceof CreativeModeInventoryScreen creativeScreen)
         {
@@ -175,7 +176,7 @@ public class CreativeScreenEvents {
                 /* Render buttons */
                 this.buttons.forEach(button ->
                 {
-                    button.render(event.getPoseStack(), event.getMouseX(), event.getMouseY(), event.getPartialTicks());
+                    button.render(event.getPoseStack(), event.getMouseX(), event.getMouseY(), event.getPartialTick());
                 });
                 
                 /* Render tooltips after so it renders above buttons */
@@ -285,19 +286,16 @@ public class CreativeScreenEvents {
         };
         
         ForgeRegistries.ITEMS.getValues().stream()
-                .filter(item -> item.getItemCategory() == MaterialCompats.itemGroup)
-                .filter(item -> item.getRegistryName().getNamespace().equals(MaterialCompats.ID))
-                .forEach(item ->
-                {
-                    item.builtInRegistryHolder().tags().forEach(tagKey ->
-                    {
-                        for(TagFilter filter : filters)
-                        {
-                            if(tagKey == filter.getTag())
-                            {
-                                filter.add(item);
+                .filter(item -> Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getNamespace().equals(MaterialCompats.ID))
+                .forEach(item -> {
+                    ForgeRegistries.ITEMS.getHolder(item).ifPresent(holder -> {
+                        holder.tags().forEach(tagKey -> {
+                            for(TagFilter filter : filters) {
+                                if(tagKey == filter.getTag()) {
+                                    filter.add(item);
+                                }
                             }
-                        }
+                        });
                     });
                 });
         
@@ -316,14 +314,14 @@ public class CreativeScreenEvents {
         }
         private final List<Item> items = Lists.newArrayList();
         private final TagKey<Item> tag;
-        private final TranslatableComponent name;
+        private final MutableComponent name;
         private final ItemStack icon;
         private boolean enabled = true;
         
         public TagFilter(TagKey<Item> tag, ItemStack icon)
         {
             this.tag = tag;
-            this.name = new TranslatableComponent(String.format("gui.tag_filter.%s.%s", tag.location().getNamespace(), tag.location().getPath().replace("/", ".")));
+            this.name = Component.translatable(String.format("gui.tag_filter.%s.%s", tag.location().getNamespace(), tag.location().getPath().replace("/", ".")));
             this.icon = icon;
         }
         
@@ -337,7 +335,7 @@ public class CreativeScreenEvents {
             return this.icon;
         }
         
-        public TranslatableComponent getName()
+        public MutableComponent getName()
         {
             return this.name;
         }

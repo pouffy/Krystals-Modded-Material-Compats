@@ -1,5 +1,6 @@
 package com.pouffydev.krystalsmaterialcompats.foundation;
 
+import com.pouffydev.krystal_core.foundation.KrystalCoreTags;
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
 import com.pouffydev.krystalsmaterialcompats.content.item.MissingTagNotifier;
 import com.pouffydev.krystalsmaterialcompats.content.item.TagDependentIngredientItem;
@@ -267,7 +268,7 @@ public class KrystalsRegistryHelpers {
      * @see TagKey
      */
     public static TagKey<Item> categoryTag(String material) {
-        return AllTags.modItemTag("category/" + material);
+        return KrystalCoreTags.modItemTag(MaterialCompats.ID, "category/" + material);
     }
     public static TagKey<Item> gems(String material) {
         return AllTags.forgeItemTag("gems/" + material);
@@ -312,7 +313,7 @@ public class KrystalsRegistryHelpers {
     }
     public static TagKey<Item> gears() {return AllTags.forgeItemTag("gears");}
     public static TagKey<Item> randomiumBlacklist() {
-        return AllTags.modItemTag("randomium", "blacklist");
+        return KrystalCoreTags.modItemTag("randomium", "blacklist");
     }
     public static TagKey<Item> nuggets() {
         return AllTags.forgeItemTag("nuggets");
