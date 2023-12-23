@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:unprocessed_steel_sheet",
+    "krystalsmaterialcompats:sturdy_steel_sheet",
+    "krystalsmaterialcompats:reprocessed_steel_sheet"
+  ]
+}

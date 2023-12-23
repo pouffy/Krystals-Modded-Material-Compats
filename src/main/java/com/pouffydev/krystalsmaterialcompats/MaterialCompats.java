@@ -2,6 +2,7 @@ package com.pouffydev.krystalsmaterialcompats;
 
 import com.mojang.logging.LogUtils;
 import com.pouffydev.krystal_core.foundation.data.lang.KrystalCoreLangMerger;
+import com.pouffydev.krystalsmaterialcompats.config.KMCClientConfig;
 import com.pouffydev.krystalsmaterialcompats.foundation.KrystalsCompatRegistrate;
 import com.pouffydev.krystalsmaterialcompats.foundation.client.MaterialCompatsClient;
 import com.pouffydev.krystalsmaterialcompats.foundation.creative.MaterialCompatCreativeTab;
@@ -12,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -19,13 +21,16 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -55,7 +60,7 @@ public class MaterialCompats
         
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(EventPriority.LOWEST, MaterialCompats::gatherData);
-        
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, KMCClientConfig.SPEC);
     }
     private void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(MaterialCompatsClient::setup);

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "krystalsmaterialcompats:zinc_sheet",
     "krystalsmaterialcompats:zinc_plate"
   ]
 }

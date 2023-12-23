@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "krystalsmaterialcompats:unprocessed_strong_bronze_sheet",
+    "krystalsmaterialcompats:sturdy_strong_bronze_sheet",
+    "krystalsmaterialcompats:reprocessed_strong_bronze_sheet"
+  ]
+}

@@ -48,6 +48,9 @@ public class AllTags {
     static String si = CompatMetals.signalum.getName();
     static String sil = CompatMetals.silver.getName();
     static String sl = CompatMetals.slimesteel.getName();
+    static String st = CompatMetals.steel.getName();
+    static String sb = CompatMetals.strong_bronze.getName();
+    static String ti = CompatMetals.tin.getName();
     static String ur = CompatMetals.uranium.getName();
     static String zn = CompatMetals.zinc.getName();
     public static <T extends IForgeRegistryEntry<T>> TagKey<T> optionalTag(IForgeRegistry<T> registry,
@@ -155,9 +158,21 @@ public class AllTags {
         signalum(MOD,"category/" + si),
         silver(MOD,"category/" + sil),
         slimesteel(MOD,"category/" + sl),
+        steel(MOD,"category/" + st),
+        strong_bronze(MOD,"category/" + sb),
+        tin(MOD,"category/" + ti),
         uranium(MOD,"category/" + ur),
         zinc(MOD,"category/" + zn),
-        
+        industrial(MOD,"category/inustrial"),
+        interdimensional(MOD,"category/interdimensional"),
+        magic(MOD,"category/magic"),
+        blacksmithing(MOD,"category/blacksmithing"),
+        overworld(MOD,"category/overworld"),
+        nether(MOD,"category/nether"),
+        end(MOD,"category/end"),
+        space(MOD,"category/space"),
+        betweenlands(MOD,"category/betweenlands"),
+        undergarden(MOD,"category/undergarden"),
         
         ;
         

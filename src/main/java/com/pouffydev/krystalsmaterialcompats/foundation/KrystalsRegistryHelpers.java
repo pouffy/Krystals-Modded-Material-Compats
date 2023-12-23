@@ -251,7 +251,6 @@ public class KrystalsRegistryHelpers {
     
     public static ItemEntry<MissingTagNotifier> missingTagNotifier(CompatMetals metal, String lang) {
         String metalName = metal.getName();
-        String capitalizedMetalName = metal.getCapitalizedName(metalName);
         return itemRegistrate
                 .item(metalName + "_tag_notifier", props -> new MissingTagNotifier(props, ingots(metalName)))
                 .tag(categoryTag(metalName))
@@ -260,7 +259,270 @@ public class KrystalsRegistryHelpers {
                 .register();
     }
     
+    //TagKey<Item> categoryTag, TagKey<Item> dimensionTag
+public static ItemEntry<TagDependentIngredientItem> compatSheet(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(plates(metalName))
+                .tag(plates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("sheet", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatMetalRod(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_rod", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(rods(metalName))
+                .tag(rods())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("rod", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatUnprocessedSheet(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("unprocessed_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("unprocessed_sheet", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatSturdySheet(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("sturdy_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("sturdy_sheet", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatReprocessedSheet(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("reprocessed_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("reprocessed_sheet", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatReinforcedSheet(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("reinforced_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(reinforcedPlates(metalName))
+                .tag(reinforcedPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("reinforced_sheet", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatDust(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_dust", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(dusts(metalName))
+                .tag(dusts())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("dust", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatGear(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_gear", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(gears(metalName))
+                .tag(gears())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("gear", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatCoin(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_coin", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(coins(metalName))
+                .tag(coins())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.countedFiveTimes("coin", metalName))
+                .register();
+    }
+public static ItemEntry<TagDependentIngredientItem> compatPlate(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_plate", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(plates(metalName))
+                .tag(plates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.countedFourTimes("plate", metalName))
+                .register();
+    }
     
+public static ItemEntry<MissingTagNotifier> missingTagNotifier(CompatMetals metal, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        String capitalizedMetalName = metal.getCapitalizedName(metalName);
+        return itemRegistrate
+                .item(metalName + "_tag_notifier", props -> new MissingTagNotifier(props, ingots(metalName)))
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.tagNotifier())
+                .lang(capitalizedMetalName + " Is Missing It's Required Tag")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatSheet(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(plates(metalName))
+                .tag(plates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("sheet", metalName))
+                .lang(lang + " Sheet")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatMetalRod(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_rod", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(rods(metalName))
+                .tag(rods())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("rod", metalName))
+                .lang(lang + " Rod")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatUnprocessedSheet(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("unprocessed_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("unprocessed_sheet", metalName))
+                .lang("Unprocessed " + lang + " Sheet")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatSturdySheet(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("sturdy_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("sturdy_sheet", metalName))
+                .lang("Sturdy " + lang + " Sheet")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatReprocessedSheet(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("reprocessed_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(sturdyPlates(metalName))
+                .tag(sturdyPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("reprocessed_sheet", metalName))
+                .lang("Reprocessed " + lang + " Sheet")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatReinforcedSheet(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item("reinforced_" + metalName + "_sheet", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(reinforcedPlates(metalName))
+                .tag(reinforcedPlates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("reinforced_sheet", metalName))
+                .lang("Reinforced " + lang + " Sheet")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatDust(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_dust", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(dusts(metalName))
+                .tag(dusts())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("dust", metalName))
+                .lang(lang + " Dust")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatGear(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_gear", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(gears(metalName))
+                .tag(gears())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.compatItem("gear", metalName))
+                .lang(lang + " Gear")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatCoin(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_coin", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(coins(metalName))
+                .tag(coins())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.countedFiveTimes("coin", metalName))
+                .lang(lang + " Coin")
+                .register();
+    }
+    
+    public static ItemEntry<TagDependentIngredientItem> compatPlate(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_plate", props -> new TagDependentIngredientItem(props, ingots(metalName)))
+                .tag(plates(metalName))
+                .tag(plates())
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.countedFourTimes("plate", metalName))
+                .lang(lang + " Plate")
+                .register();
+    }
+    
+    public static ItemEntry<MissingTagNotifier> missingTagNotifier(CompatMetals metal, String lang, TagKey<Item> categoryTag, TagKey<Item> dimensionTag) {
+        String metalName = metal.getName();
+        return itemRegistrate
+                .item(metalName + "_tag_notifier", props -> new MissingTagNotifier(props, ingots(metalName)))
+                .tag(categoryTag)
+                .tag(dimensionTag)
+                .model(AssetLookup.tagNotifier())
+                .lang(lang + " Is Missing It's Required Tag")
+                .register();
+    }
     
     /**
      * Pre-Built TagKey's for my items for use in TagGen

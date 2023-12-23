@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "krystalsmaterialcompats:brass_sheet",
     "krystalsmaterialcompats:brass_plate"
   ]
 }

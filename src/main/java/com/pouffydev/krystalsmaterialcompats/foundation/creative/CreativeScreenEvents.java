@@ -3,6 +3,7 @@ package com.pouffydev.krystalsmaterialcompats.foundation.creative;
 import com.google.common.collect.Lists;
 import com.pouffydev.krystalsmaterialcompats.KMCItems;
 import com.pouffydev.krystalsmaterialcompats.MaterialCompats;
+import com.pouffydev.krystalsmaterialcompats.config.KMCClientConfig;
 import com.pouffydev.krystalsmaterialcompats.foundation.data.AllTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.Button;
@@ -256,7 +257,7 @@ public class CreativeScreenEvents {
     private void compileItems()
     {
         ITagManager<Item> tagManager = ForgeRegistries.ITEMS.tags();
-        TagFilter[] filters = new TagFilter[] {
+        TagFilter[] groupedByMaterial = new TagFilter[] {
                 new TagFilter(AllTags.AllCompatItemTags.aluminum.tag, new ItemStack(KMCItems.sturdy_aluminum_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.amethyst_bronze.tag, new ItemStack(KMCItems.sturdy_amethyst_bronze_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.arcane_gold.tag, new ItemStack(KMCItems.sturdy_arcane_gold_sheet.get())),
@@ -280,8 +281,22 @@ public class CreativeScreenEvents {
                 new TagFilter(AllTags.AllCompatItemTags.signalum.tag, new ItemStack(KMCItems.sturdy_signalum_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.silver.tag, new ItemStack(KMCItems.sturdy_silver_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.slimesteel.tag, new ItemStack(KMCItems.sturdy_slimesteel_sheet.get())),
+                new TagFilter(AllTags.AllCompatItemTags.steel.tag, new ItemStack(KMCItems.sturdy_steel_sheet.get())),
+                new TagFilter(AllTags.AllCompatItemTags.strong_bronze.tag, new ItemStack(KMCItems.sturdy_strong_bronze_sheet.get())),
+                new TagFilter(AllTags.AllCompatItemTags.tin.tag, new ItemStack(KMCItems.sturdy_tin_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.uranium.tag, new ItemStack(KMCItems.sturdy_uranium_sheet.get())),
                 new TagFilter(AllTags.AllCompatItemTags.zinc.tag, new ItemStack(KMCItems.sturdy_zinc_sheet.get())),
+        };
+        TagFilter[] groupedByCategory = new TagFilter[] {
+                new TagFilter(AllTags.AllCompatItemTags.industrial.tag, new ItemStack(KMCItems.steel_plate.get())),
+                new TagFilter(AllTags.AllCompatItemTags.interdimensional.tag, new ItemStack(KMCItems.enderium_gear.get())),
+                new TagFilter(AllTags.AllCompatItemTags.magic.tag, new ItemStack(KMCItems.arcane_gold_coin.get())),
+                new TagFilter(AllTags.AllCompatItemTags.blacksmithing.tag, new ItemStack(KMCItems.cobalt_dust.get())),
+        };
+        TagFilter[] groupedByDimension = new TagFilter[] {
+                new TagFilter(AllTags.AllCompatItemTags.overworld.tag, new ItemStack(KMCItems.zinc_gear.get())),
+                new TagFilter(AllTags.AllCompatItemTags.nether.tag, new ItemStack(KMCItems.cobalt_gear.get())),
+                new TagFilter(AllTags.AllCompatItemTags.end.tag, new ItemStack(KMCItems.enderium_gear.get())),
         };
         
         ForgeRegistries.ITEMS.getValues().stream()
@@ -291,18 +306,37 @@ public class CreativeScreenEvents {
                 {
                     item.builtInRegistryHolder().tags().forEach(tagKey ->
                     {
-                        for(TagFilter filter : filters)
-                        {
-                            if(tagKey == filter.getTag())
-                            {
-                                filter.add(item);
+                        if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByMaterial) {
+                            for (TagFilter filter : groupedByMaterial) {
+                                if (tagKey == filter.getTag()) {
+                                    filter.add(item);
+                                }
+                            }
+                        } else if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByCategory) {
+                            for (TagFilter filter : groupedByCategory) {
+                                if (tagKey == filter.getTag()) {
+                                    filter.add(item);
+                                }
+                            }
+                        } else if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByDimension) {
+                            for (TagFilter filter : groupedByDimension) {
+                                if (tagKey == filter.getTag()) {
+                                    filter.add(item);
+                                }
                             }
                         }
                     });
                 });
         
         this.filters = new ArrayList<>();
-        this.filters.addAll(Arrays.asList(filters));
+        if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByMaterial) {
+            this.filters.addAll(Arrays.asList(groupedByMaterial));
+        } else if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByCategory) {
+            this.filters.addAll(Arrays.asList(groupedByCategory));
+        } else if (KMCClientConfig.creativeTabFilterMode.get() == KMCClientConfig.CreativeTabFilterMode.groupByDimension) {
+            this.filters.addAll(Arrays.asList(groupedByDimension));
+        }
+        
     }
     
     /**
